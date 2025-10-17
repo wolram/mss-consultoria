@@ -1,12 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Sobre | MSS Consultoria',
-  description: 'Conheça a história, missão e valores da MSS Consultoria. Especialistas em RPA, IA e Engenharia de Software.',
-};
 
 const team = [
   {
