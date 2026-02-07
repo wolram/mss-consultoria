@@ -82,7 +82,7 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-primary"
             placeholder="Seu nome"
           />
         </div>
@@ -97,7 +97,7 @@ export default function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-primary"
             placeholder="seu@email.com"
           />
         </div>
@@ -113,7 +113,7 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-primary"
             placeholder="Sua empresa"
           />
         </div>
@@ -127,12 +127,12 @@ export default function ContactForm() {
             value={formData.service}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-primary"
           >
             <option value="">Selecione um serviço</option>
-            <option value="rpa">RPA - Automação</option>
-            <option value="ia">IA - Inteligência Artificial</option>
-            <option value="engenharia">Engenharia de Software</option>
+            <option value="rpa">RPA & Automação</option>
+            <option value="ia">Soluções de IA</option>
+            <option value="consultoria">Consultoria Estratégica</option>
             <option value="outro">Outro</option>
           </select>
         </div>
@@ -148,7 +148,7 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-brand-primary resize-none"
           placeholder="Conte-nos mais sobre seu projeto..."
         />
       </div>
@@ -156,7 +156,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full px-6 py-3 bg-brand-primary text-white rounded-lg hover:bg-brand-deep transition-all font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {loading ? 'Enviando...' : 'Enviar Mensagem'}
       </button>

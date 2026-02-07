@@ -7,18 +7,18 @@ export default function Contato() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-brand-surface to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Vamos Conversar
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-brand-primary">
+              Vamos conversar
             </h1>
             <p className="text-2xl text-gray-600 max-w-2xl">
-              Entre em contato conosco para discutir como podemos ajudar seu negócio a crescer.
+              Fale com nossa equipe e descubra como transformar seus processos com automação inteligente.
             </p>
           </motion.div>
         </div>
@@ -35,17 +35,17 @@ export default function Contato() {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              {/* Phone */}
+              {/* WhatsApp */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-lg font-bold mb-3">Telefone</h3>
+                <h3 className="text-lg font-bold mb-3">WhatsApp Business</h3>
                 <a
-                  href="tel:+5511999999999"
-                  className="text-gray-600 hover:text-black transition-colors text-lg"
+                  href="https://wa.me/5511999999999"
+                  className="text-gray-600 hover:text-brand-primary transition-colors text-lg"
                 >
                   +55 (11) 99999-9999
                 </a>
@@ -61,7 +61,7 @@ export default function Contato() {
                 <h3 className="text-lg font-bold mb-3">Email</h3>
                 <a
                   href="mailto:contato@mssconsultoria.com.br"
-                  className="text-gray-600 hover:text-black transition-colors text-lg"
+                  className="text-gray-600 hover:text-brand-primary transition-colors text-lg"
                 >
                   contato@mssconsultoria.com.br
                 </a>
@@ -90,14 +90,17 @@ export default function Contato() {
               >
                 <h3 className="text-lg font-bold mb-3">Redes Sociais</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="text-gray-600 hover:text-black transition-colors">
+                  <a
+                    href="https://www.linkedin.com/company/mss-consultoria"
+                    className="text-gray-600 hover:text-brand-primary transition-colors"
+                  >
                     LinkedIn
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                    GitHub
-                  </a>
-                  <a href="#" className="text-gray-600 hover:text-black transition-colors">
-                    Twitter
+                  <a
+                    href="https://wa.me/5511999999999"
+                    className="text-gray-600 hover:text-brand-primary transition-colors"
+                  >
+                    WhatsApp
                   </a>
                 </div>
               </motion.div>
@@ -121,9 +124,9 @@ export default function Contato() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-surface">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Perguntas Frequentes</h2>
+          <h2 className="text-4xl font-bold mb-12 text-brand-primary">Perguntas Frequentes</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[

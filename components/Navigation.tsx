@@ -11,17 +11,16 @@ export default function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/sobre', label: 'Sobre' },
     { href: '/servicos', label: 'Serviços' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/blog', label: 'Blog' },
+    { href: '/portfolio', label: 'Portfólio' },
     { href: '/contato', label: 'Contato' },
   ];
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white border-b border-gray-200">
+    <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl text-black">
-          MSS
+        <Link href="/" className="font-bold text-xl text-brand-primary">
+          MSS Consultoria
         </Link>
 
         {/* Desktop Menu */}
@@ -30,7 +29,7 @@ export default function Navigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-gray-700 hover:text-black transition-colors text-sm font-medium"
+              className="text-gray-700 hover:text-brand-primary transition-colors text-sm font-medium"
             >
               {item.label}
             </Link>
@@ -41,7 +40,7 @@ export default function Navigation() {
         <div className="hidden md:block">
           <Link
             href="/contato"
-            className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium"
+            className="px-6 py-2 bg-brand-primary text-white rounded-lg hover:bg-brand-deep transition-colors text-sm font-medium"
           >
             Conversar
           </Link>
@@ -53,17 +52,17 @@ export default function Navigation() {
           onClick={() => setIsOpen(!isOpen)}
         >
           <div
-            className={`w-6 h-0.5 bg-black transition-transform ${
+            className={`w-6 h-0.5 bg-brand-primary transition-transform ${
               isOpen ? 'rotate-45 translate-y-2' : ''
             }`}
           />
           <div
-            className={`w-6 h-0.5 bg-black transition-opacity ${
+            className={`w-6 h-0.5 bg-brand-primary transition-opacity ${
               isOpen ? 'opacity-0' : ''
             }`}
           />
           <div
-            className={`w-6 h-0.5 bg-black transition-transform ${
+            className={`w-6 h-0.5 bg-brand-primary transition-transform ${
               isOpen ? '-rotate-45 -translate-y-2' : ''
             }`}
           />
@@ -83,7 +82,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-black transition-colors font-medium"
+                className="text-gray-700 hover:text-brand-primary transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -91,7 +90,7 @@ export default function Navigation() {
             ))}
             <Link
               href="/contato"
-              className="px-6 py-2 bg-black text-white rounded-lg text-center font-medium"
+              className="px-6 py-2 bg-brand-primary text-white rounded-lg text-center font-medium"
               onClick={() => setIsOpen(false)}
             >
               Conversar
