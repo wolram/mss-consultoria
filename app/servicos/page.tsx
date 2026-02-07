@@ -5,59 +5,59 @@ import { motion } from 'framer-motion';
 const services = [
   {
     id: 1,
-    title: 'RPA - Automação de Processos',
-    description: 'Automatize processos repetitivos e manuais com nossa plataforma RPA.',
-    icon: '🤖',
+    title: 'RPA & Automação Inteligente',
+    description: 'Bots confiáveis para processos repetitivos, integração de sistemas e governança de ponta a ponta.',
+    icon: '⚙️',
     details: [
-      'Análise e mapeamento de processos',
-      'Desenvolvimento de bots inteligentes',
-      'Integração com sistemas existentes',
-      'Monitoramento e otimização contínua',
-      'Treinamento de equipes',
+      'Diagnóstico e priorização de processos',
+      'Desenvolvimento e orquestração de bots',
+      'Integração com ERPs, CRMs e legados',
+      'Monitoramento contínuo e SLAs',
+      'Compliance e governança operacional',
     ],
     benefits: [
-      'Redução de 70% em tempo de execução',
-      'Aumento de precisão para 99.9%',
-      'Economia de custos operacionais',
-      'Liberação de equipe para tarefas estratégicas',
+      'Redução de tempo em tarefas críticas',
+      'Aumento de precisão e rastreabilidade',
+      'Economia operacional mensurável',
+      'Equipe focada em atividades estratégicas',
     ],
   },
   {
     id: 2,
-    title: 'IA - Inteligência Artificial',
-    description: 'Implemente soluções de IA para análise, predição e decisões inteligentes.',
+    title: 'Soluções de IA',
+    description: 'Chatbots inteligentes, análise avançada de dados e automação cognitiva com foco em performance.',
     icon: '🧠',
     details: [
-      'Machine Learning e Deep Learning',
-      'Análise preditiva de dados',
-      'Processamento de linguagem natural',
-      'Visão computacional',
-      'Chatbots inteligentes',
+      'IA conversacional com NLP',
+      'Análise preditiva e prescritiva',
+      'Automação cognitiva e agentes',
+      'Dashboards inteligentes',
+      'Governança e ética em IA',
     ],
     benefits: [
-      'Insights mais precisos e rápidos',
-      'Tomada de decisão baseada em dados',
-      'Melhoria na experiência do cliente',
-      'Automatização de tarefas cognitivas',
+      'Decisões baseadas em dados confiáveis',
+      'Melhoria da experiência do cliente',
+      'Escala de atendimento e operações',
+      'Ganho de eficiência em áreas críticas',
     ],
   },
   {
     id: 3,
-    title: 'Engenharia de Software',
-    description: 'Desenvolvimento de aplicações robustas e escaláveis.',
-    icon: '💻',
+    title: 'Consultoria Estratégica',
+    description: 'Diagnóstico de processos, roadmap de automação e capacitação do time para acelerar resultados.',
+    icon: '📈',
     details: [
-      'Desenvolvimento Full Stack',
-      'Arquitetura de sistemas',
-      'Migração para cloud',
-      'DevOps e CI/CD',
-      'Testes automatizados',
+      'Workshops de descoberta',
+      'Mapeamento de indicadores e metas',
+      'Roadmap de automação e IA',
+      'Treinamento de equipes',
+      'Gestão de mudança e adoção',
     ],
     benefits: [
-      'Código limpo e manutenível',
-      'Performance e escalabilidade',
-      'Segurança de ponta',
-      'Entrega ágil e contínua',
+      'Prioridades claras e ROI rápido',
+      'Adoção com menos fricção',
+      'Alinhamento entre negócio e TI',
+      'Resultados sustentáveis',
     ],
   },
 ];
@@ -66,18 +66,18 @@ export default function Servicos() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-brand-surface to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Nossos Serviços
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-brand-primary">
+              Serviços orientados a resultados
             </h1>
             <p className="text-2xl text-gray-600 max-w-2xl">
-              Soluções completas para transformar seu negócio
+              Estruturamos soluções de automação e IA com governança e impacto mensurável.
             </p>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ export default function Servicos() {
                     <ul className="space-y-2">
                       {service.details.map((detail, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="text-black mt-1">✓</span>
+                          <span className="text-brand-accent mt-1">✓</span>
                           <span className="text-gray-700">{detail}</span>
                         </li>
                       ))}
@@ -116,19 +116,22 @@ export default function Servicos() {
                 </div>
 
                 {/* Right side */}
-                <div className="bg-gray-50 p-8 rounded-lg">
+                <div className="bg-brand-surface p-8 rounded-lg">
                   <h3 className="text-2xl font-bold mb-6">Benefícios:</h3>
                   <div className="space-y-4">
                     {service.benefits.map((benefit, i) => (
-                      <div key={i} className="border-l-4 border-black pl-4">
+                      <div key={i} className="border-l-4 border-brand-primary pl-4">
                         <p className="text-gray-700">{benefit}</p>
                       </div>
                     ))}
                   </div>
 
-                  <button className="w-full mt-8 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all font-semibold">
-                    Solicitar Orçamento
-                  </button>
+                  <a
+                    href="/contato"
+                    className="block text-center w-full mt-8 px-6 py-3 bg-brand-primary text-white rounded-lg hover:bg-brand-deep transition-all font-semibold"
+                  >
+                    Solicitar diagnóstico
+                  </a>
                 </div>
               </div>
 

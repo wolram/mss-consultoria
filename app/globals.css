@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-brand-primary: #1e3a5f;
+    --color-brand-accent: #00d4aa;
+    --color-brand-surface: #f5f7fa;
+    --color-brand-deep: #162c46;
+    --color-text-primary: #0f172a;
+    --color-text-muted: #475569;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --shadow-soft: 0 10px 30px -20px rgba(15, 23, 42, 0.25);
+    --shadow-medium: 0 24px 60px -40px rgba(15, 23, 42, 0.35);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +29,9 @@ html {
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   background-color: #ffffff;
-  color: #111827;
+  color: #0f172a;
   line-height: 1.6;
 }
 
@@ -81,7 +97,7 @@ button:hover {
 
 /* Selection */
 ::selection {
-  background-color: #111827;
+  background-color: #1E3A5F;
   color: #ffffff;
 }
 
@@ -91,14 +107,14 @@ button:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f5f7fa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #1e3a5f;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #162c46;
 }

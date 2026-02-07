@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         black: '#000000',
         white: '#FFFFFF',
+        brand: {
+          primary: '#1E3A5F',
+          accent: '#00D4AA',
+          surface: '#F5F7FA',
+          deep: '#162C46',
+        },
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',
@@ -25,7 +31,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       spacing: {
         container: '1200px',

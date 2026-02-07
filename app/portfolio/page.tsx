@@ -5,47 +5,47 @@ import { motion } from 'framer-motion';
 const cases = [
   {
     id: 1,
-    title: 'Automação de Processamento de Pedidos',
-    company: 'Empresa Varejo',
+    title: 'Automação de processamento de pedidos',
+    sector: 'Varejo e logística',
     category: 'RPA',
-    description: 'Implementação de bot para processar 10.000+ pedidos diários.',
+    description: 'Implementação de bots para tratar milhares de pedidos diários sem intervenção manual.',
     results: [
-      '80% redução em tempo de processamento',
-      '99.9% de precisão',
-      'R$ 500k economizados anualmente',
+      '80% de redução no tempo de processamento',
+      '99,9% de precisão nas validações',
+      'Economia anual relevante em backoffice',
     ],
     image: '📦',
   },
   {
     id: 2,
-    title: 'Sistema de IA para Previsão de Demanda',
-    company: 'Indústria de Alimentos',
+    title: 'IA para previsão de demanda',
+    sector: 'Indústria de bens de consumo',
     category: 'IA',
-    description: 'ML model para prever demanda com 95% de acurácia.',
+    description: 'Modelos preditivos para compras e planejamento de produção.',
     results: [
-      '95% acurácia nas previsões',
-      '30% redução em desperdício',
-      'Melhor planejamento de estoque',
+      '95% de acurácia nas previsões',
+      '30% de redução em desperdícios',
+      'Otimização de estoque e compras',
     ],
     image: '📊',
   },
   {
     id: 3,
-    title: 'Migração para Arquitetura Moderna',
-    company: 'Fintech',
-    category: 'Engenharia',
-    description: 'Refatoração de aplicação legada para cloud native.',
+    title: 'Automação bancária com compliance',
+    sector: 'Serviços financeiros',
+    category: 'RPA',
+    description: 'Automação de fluxos críticos com regras de compliance e auditoria.',
     results: [
-      '10x melhor performance',
-      'Escalabilidade automática',
-      'Redução de downtime para 0.01%',
+      'Redução de retrabalho em 45%',
+      'Rastreabilidade completa de processos',
+      'Operação auditável em tempo real',
     ],
-    image: '☁️',
+    image: '🏦',
   },
   {
     id: 4,
     title: 'Chatbot de Atendimento Inteligente',
-    company: 'Serviços Financeiros',
+    sector: 'Serviços',
     category: 'IA',
     description: 'IA conversacional para atendimento 24/7.',
     results: [
@@ -57,8 +57,8 @@ const cases = [
   },
   {
     id: 5,
-    title: 'RPA em Gestão de Recursos Humanos',
-    company: 'Empresa Multinacional',
+    title: 'Automação de RH e onboarding',
+    sector: 'Indústria e serviços',
     category: 'RPA',
     description: 'Automação de processos de recrutamento e onboarding.',
     results: [
@@ -70,16 +70,16 @@ const cases = [
   },
   {
     id: 6,
-    title: 'Plataforma de E-commerce Escalável',
-    company: 'Retail Digital',
-    category: 'Engenharia',
-    description: 'Desenvolvimento de plataforma suportando 1M+ usuários.',
+    title: 'Análise inteligente de KPIs operacionais',
+    sector: 'Operações corporativas',
+    category: 'IA',
+    description: 'Dashboards com insights automatizados para tomada de decisão.',
     results: [
-      'Crescimento de 300% em volume',
-      'Conversão aumentada em 45%',
-      'Tempo de carregamento: 800ms',
+      'Indicadores críticos em tempo real',
+      'Automação de relatórios executivos',
+      'Melhoria de produtividade em áreas-chave',
     ],
-    image: '🛍️',
+    image: '📈',
   },
 ];
 
@@ -87,18 +87,18 @@ export default function Portfolio() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-brand-surface to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Nossos Cases de Sucesso
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-brand-primary">
+              Cases & Portfólio
             </h1>
             <p className="text-2xl text-gray-600 max-w-2xl">
-              Veja como ajudamos empresas a transformar seus negócios
+              Projetos com métricas claras e impacto real, sempre preservando a confidencialidade dos clientes.
             </p>
           </motion.div>
         </div>
@@ -126,7 +126,7 @@ export default function Portfolio() {
                 </div>
 
                 <h3 className="text-2xl font-bold mb-2">{caseItem.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{caseItem.company}</p>
+                <p className="text-gray-600 text-sm mb-4">{caseItem.sector}</p>
                 <p className="text-gray-700 mb-6">{caseItem.description}</p>
 
                 <div className="space-y-2 border-t border-gray-200 pt-6">
@@ -145,14 +145,14 @@ export default function Portfolio() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-20 bg-brand-primary text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { number: '50+', label: 'Projetos Entregues' },
-              { number: '35M', label: 'Economizados p/ Clientes' },
-              { number: '98%', label: 'Taxa de Satisfação' },
-              { number: '150+', label: 'Profissionais' },
+              { number: '60+', label: 'Bots em produção' },
+              { number: 'R$ 8M+', label: 'Economia gerada' },
+              { number: '8+ anos', label: 'Experiência em automação' },
+              { number: '12+', label: 'Setores atendidos' },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -162,8 +162,36 @@ export default function Portfolio() {
                 viewport={{ once: true }}
               >
                 <div className="text-5xl font-bold mb-2">{stat.number}</div>
-                <p className="text-gray-400">{stat.label}</p>
+                <p className="text-white/70">{stat.label}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Sectors */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-10 text-brand-primary">
+            Setores atendidos
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-600">
+            {[
+              'Bancos e serviços financeiros',
+              'Varejo e e-commerce',
+              'Indústria',
+              'Logística',
+              'Saúde',
+              'Educação corporativa',
+              'BPO e backoffice',
+              'Serviços profissionais',
+            ].map((sector) => (
+              <div
+                key={sector}
+                className="bg-brand-surface border border-gray-200 rounded-lg px-4 py-3 text-sm"
+              >
+                {sector}
+              </div>
             ))}
           </div>
         </div>

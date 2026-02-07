@@ -6,27 +6,27 @@ import Link from 'next/link';
 const services = [
   {
     id: 1,
-    title: 'RPA - Automação de Processos',
+    title: 'RPA & Automação',
     description:
-      'Automatize processos repetitivos e libere sua equipe para tarefas estratégicas. Reduzindo custos e aumentando produtividade.',
-    icon: '🤖',
-    features: ['Workflow Automation', 'Bot Development', 'Process Optimization'],
+      'Bots confiáveis para processos repetitivos, integração de sistemas e governança ponta a ponta.',
+    icon: '⚙️',
+    features: ['Mapeamento de processos', 'Orquestração de bots', 'Integração com ERPs'],
   },
   {
     id: 2,
-    title: 'IA - Inteligência Artificial',
+    title: 'Soluções de IA',
     description:
-      'Implemente soluções de IA para análise de dados, predição e tomada de decisão inteligente em tempo real.',
+      'Chatbots inteligentes, análise avançada de dados e automação cognitiva com foco em resultados mensuráveis.',
     icon: '🧠',
-    features: ['Machine Learning', 'Data Analytics', 'AI Integration'],
+    features: ['IA conversacional', 'Analytics aplicado', 'Automação cognitiva'],
   },
   {
     id: 3,
-    title: 'Engenharia de Software',
+    title: 'Consultoria Estratégica',
     description:
-      'Desenvolvimento de aplicações robustas, escaláveis e seguras com as melhores práticas e tecnologias modernas.',
-    icon: '💻',
-    features: ['Custom Development', 'Cloud Solutions', 'DevOps'],
+      'Diagnóstico de processos, roadmap de automação e capacitação do time para acelerar entregas.',
+    icon: '📈',
+    features: ['Diagnóstico executivo', 'Roadmap de automação', 'Treinamento interno'],
   },
 ];
 
@@ -41,11 +41,11 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Nossas Soluções
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-primary">
+            Soluções sob medida
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Oferecemos três pilares de excelência para transformar sua empresa
+            Três frentes integradas para garantir eficiência, escala e governança.
           </p>
         </motion.div>
 
@@ -57,7 +57,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all hover:border-gray-300"
+              className="p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all hover:border-gray-300 bg-white"
             >
               <div className="text-5xl mb-4">{service.icon}</div>
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -66,7 +66,7 @@ export default function Services() {
               <div className="space-y-2 mb-6">
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-black rounded-full" />
+                    <div className="w-2 h-2 bg-brand-accent rounded-full" />
                     <span className="text-gray-700">{feature}</span>
                   </div>
                 ))}
@@ -74,7 +74,7 @@ export default function Services() {
 
               <Link
                 href="/servicos"
-                className="inline-block text-black font-semibold hover:underline"
+                className="inline-block text-brand-primary font-semibold hover:underline"
               >
                 Saiba mais →
               </Link>

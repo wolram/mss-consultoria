@@ -2,43 +2,22 @@
 
 import { motion } from 'framer-motion';
 
-const team = [
-  {
-    name: 'João Silva',
-    role: 'Founder & CEO',
-    image: '👨‍💼',
-    bio: 'Especialista em RPA com 15 anos de experiência',
-  },
-  {
-    name: 'Maria Santos',
-    role: 'CTO',
-    image: '👩‍💻',
-    bio: 'Engenheira de Software e especialista em IA',
-  },
-  {
-    name: 'Pedro Oliveira',
-    role: 'Head of Solutions',
-    image: '👨‍🔬',
-    bio: 'Consultор de automação e otimização de processos',
-  },
-];
-
 const values = [
   {
     title: 'Excelência',
     description: 'Comprometimento com qualidade em tudo que fazemos',
   },
   {
-    title: 'Inovação',
-    description: 'Sempre buscando as melhores soluções tecnológicas',
+    title: 'Resultados',
+    description: 'Foco em métricas, ganhos reais e impacto financeiro',
   },
   {
     title: 'Parceria',
     description: 'Trabalhando junto com nossos clientes para sucesso',
   },
   {
-    title: 'Confiança',
-    description: 'Transparência e segurança em cada projeto',
+    title: 'Transparência',
+    description: 'Comunicação clara e decisões orientadas por dados',
   },
 ];
 
@@ -46,18 +25,18 @@ export default function Sobre() {
   return (
     <main className="pt-20">
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-brand-surface to-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Sobre a MSS
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-brand-primary">
+              Sobre a MSS Consultoria
             </h1>
             <p className="text-2xl text-gray-600 max-w-2xl">
-              Somos especialistas em transformação digital, ajudando empresas a alcançar excelência operacional através de RPA, IA e Engenharia de Software.
+              Ajudamos empresas brasileiras a transformar operações com automação inteligente, IA aplicada e governança sólida.
             </p>
           </motion.div>
         </div>
@@ -74,19 +53,55 @@ export default function Sobre() {
           >
             <h2 className="text-4xl font-bold mb-8">Nossa História</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Fundada em 2018, a MSS Consultoria nasceu da visão de transformar a forma como as empresas operam através de tecnologia inteligente. O que começou como um pequeno time de especialistas, hoje é referência em soluções de automação e inteligência artificial.
+              A MSS Consultoria nasceu para aproximar tecnologia e resultados. Com experiência prática em ambiente corporativo bancário, estruturamos automações que respeitam regras, segurança e compliance sem perder velocidade.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Ao longo dos anos, ajudamos centenas de empresas a otimizar seus processos, reduzir custos operacionais e ganhar competitividade no mercado. Cada projeto é uma oportunidade de inovar e criar valor real para nossos clientes.
+              Ao longo dos anos, entregamos projetos de alto impacto em operações críticas, sempre com foco em produtividade, redução de custos e sustentabilidade das soluções.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 bg-gray-50">
+      {/* Founder */}
+      <section className="py-20 bg-brand-surface">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Nossos Valores</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center md:text-left"
+            >
+              <div className="text-6xl mb-4">👤</div>
+              <h3 className="text-2xl font-bold text-brand-primary">Marlow</h3>
+              <p className="text-gray-600 font-semibold">Fundador & Especialista em Automação</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="md:col-span-2 space-y-4 text-gray-600"
+            >
+              <p>
+                Com mais de 8 anos em automação inteligente, Marlow lidera projetos que
+                conectam processos críticos a resultados mensuráveis. Sua trajetória inclui
+                operações bancárias complexas, garantindo governança e eficiência.
+              </p>
+              <p>
+                Formação em Engenharia Mecânica, MBA em Data Science (USP) e MBA em IA (FGV),
+                combinando visão estratégica e domínio técnico para acelerar decisões.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-12 text-brand-primary">Nossos Valores</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -95,34 +110,10 @@ export default function Sobre() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-white rounded-lg border border-gray-200"
+                className="p-8 bg-brand-surface rounded-lg border border-gray-200"
               >
                 <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12">Nosso Time</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">{member.image}</div>
-                <h3 className="text-2xl font-bold mb-2">{member.name}</h3>
-                <p className="text-gray-600 font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-500">{member.bio}</p>
               </motion.div>
             ))}
           </div>
